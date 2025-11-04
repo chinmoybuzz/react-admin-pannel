@@ -11,7 +11,7 @@ export default function LoginPage() {
       {/* Right section login form */}
       <div className="flex items-center justify-center p-10 bg-[#101828] text-white">
         <div className="w-full max-w-md space-y-6">
-          <h2 className="text-3xl font-bold text-center">Welcome Back</h2>
+          <h2 className="text-3xl font-bold text-center">Welcome BackK</h2>
           <p className="text-center opacity-70">Login to your Exam Portal</p>
 
           <form className="space-y-5">
