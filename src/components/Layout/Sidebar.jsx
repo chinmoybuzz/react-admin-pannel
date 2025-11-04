@@ -1,4 +1,4 @@
-import { Home, Users, Settings } from "lucide-react";
+import { Home, Users, Settings, Book } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
@@ -17,6 +17,12 @@ const Sidebar = () => {
 
         <NavLink to="/users" className={linkClasses}>
           <Users size={20} /> Users
+        </NavLink>
+        <NavLink to="/courses" className={linkClasses}>
+          <Book size={20} /> Courses
+        </NavLink>
+        <NavLink to="/enrollment" className={linkClasses}>
+          <Book size={20} /> Enrollement
         </NavLink>
 
         <NavLink to="/roles" className={linkClasses}>

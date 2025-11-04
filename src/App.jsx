@@ -1,26 +1,31 @@
-// import './App.css'
 import { Route, Routes } from "react-router-dom";
 import Layout from "../src/components/Layout/Layout";
 import { Suspense, lazy } from "react";
-import Roles from "./pages/Roles";
 
 function App() {
-  // Lazy pages (code splitting)
   const Dashboard = lazy(() => import("./pages/Dashboard"));
+  const Roles = lazy(() => import("./pages/Roles"));
   const Users = lazy(() => import("./pages/Users"));
   const Settings = lazy(() => import("./pages/Settings"));
+  const Login = lazy(() => import("./pages/Login"));
+  const SignUp = lazy(() => import("./pages/SignUp"));
+
   return (
-    <Layout>
-      <Suspense fallback={<p className="p-6">Loading...</p>}>
-        <Routes>
+    <Suspense fallback={<p className="p-6">Loading...</p>}>
+      <Routes>
+        {/* Login OUTSIDE layout */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/signUp" element={<SignUp />} />
+
+        {/* App Layout Pages */}
+        <Route element={<Layout />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/users" element={<Users />} />
           <Route path="/roles" element={<Roles />} />
           <Route path="/settings" element={<Settings />} />
-        </Routes>
-      </Suspense>
-      {/* <Users /> */}
-    </Layout>
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }
 

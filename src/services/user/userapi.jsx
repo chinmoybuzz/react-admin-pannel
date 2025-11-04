@@ -72,7 +72,7 @@ const userApi = {
   },
 
   // ✅ Create user with image
-  async create(data) {
+  async createUser(data) {
     return axios
       .post(BASE_URL, data, {
         headers: { "Content-Type": "multipart/form-data" },

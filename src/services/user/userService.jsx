@@ -63,6 +63,7 @@ function createUserService(userApi) {
     },
 
     async createUser(data) {
+      console.log("form data in dashboard,", data);
       return await userApi.createUser(data);
     },
 
