@@ -93,17 +93,6 @@ VITE_API_URL=https://your-backend-api.com
 
 ---
 
-## 🔐 Authentication Flow
-
-The Admin Panel utilizes a robust, security-focused authentication mechanism:
-
-* **JWT-based Authentication:** Securely manages user sessions using JSON Web Tokens.
-* **Protected Routes:** Key management pages are inaccessible without a valid token.
-* **Token Validation & Storage:** Tokens are securely validated and stored to maintain session integrity.
-* **Admin-Only Access:** Critical functionalities are strictly guarded for administrators.
-
----
-
 ## 🧩 Future Improvements
 
 This platform is planned for continuous expansion with exciting new features:
@@ -125,6 +114,7 @@ This project is licensed under the **MIT License**.
 ---
 
 ## 👨‍💻 Author
+## ⚙️ Installation & Setup
 
 **Chinmoy Hembram**
 MERN Stack Developer
