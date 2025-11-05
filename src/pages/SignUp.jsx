@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Signup() {
+const Signup = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#101828] text-white px-5">
       <div className="bg-[#1e2939] p-10 rounded-2xl shadow-xl w-full max-w-md space-y-6">
@@ -26,4 +26,6 @@ export default function Signup() {
       </div>
     </div>
   );
-}
+};
+
+export default Signup;
