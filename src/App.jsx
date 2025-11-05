@@ -18,12 +18,12 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
 
         {/* App Layout Pages */}
-        <Route element={<Layout />}>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/roles" element={<Roles />} />
-          <Route path="/settings" element={<Settings />} />
-        </Route>
+        {/* <Route element={<Layout />}> */}
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/roles" element={<Roles />} />
+        <Route path="/settings" element={<Settings />} />
+        {/* </Route> */}
       </Routes>
     </Suspense>
   );
