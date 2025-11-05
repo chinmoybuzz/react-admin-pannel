@@ -28,6 +28,7 @@ const Roles = () => {
     if (x > y) return sortOrder === "asc" ? 1 : -1;
     return 0;
   });
+  console.log("User roles:", userRole);
 
   const usersPerPage = 10;
   const totalPages = Math.ceil(sorted.length / usersPerPage);
@@ -70,7 +71,7 @@ const Roles = () => {
               <th onClick={() => handleSort("name")} className="py-3 px-4 cursor-pointer">
                 Name ⬍
               </th>
-              <th onClick={() => handleSort("email")} className="py-3 px-4 cursor-pointer">
+              <th onClick={() => handleSort("role")} className="py-3 px-4 cursor-pointer">
                 Role ⬍
               </th>
               <th onClick={() => handleSort("status")} className="py-3 px-4 cursor-pointer">
