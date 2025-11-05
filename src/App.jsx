@@ -3,12 +3,12 @@ import Layout from "../src/components/Layout/Layout";
 import { Suspense, lazy } from "react";
 
 function App() {
-  const Dashboard = lazy(() => import("./pages/dashboard"));
-  const Roles = lazy(() => import("./pages/roles"));
-  const Users = lazy(() => import("./pages/users"));
-  const Settings = lazy(() => import("./pages/settings"));
-  const Login = lazy(() => import("./pages/login"));
-  const SignUp = lazy(() => import("./pages/signup"));
+  const Dashboard = lazy(() => import("./pages/Dashboard"));
+  const Roles = lazy(() => import("./pages/Roles"));
+  const Users = lazy(() => import("./pages/Users"));
+  const Settings = lazy(() => import("./pages/Settings"));
+  const Login = lazy(() => import("./pages/Login"));
+  const SignUp = lazy(() => import("./pages/Signup"));
 
   return (
     <Suspense fallback={<p className="p-6">Loading...</p>}>
