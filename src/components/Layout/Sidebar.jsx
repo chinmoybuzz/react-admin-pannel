@@ -21,8 +21,8 @@ const Sidebar = () => {
         <NavLink to="/courses" className={linkClasses}>
           <Book size={20} /> Courses
         </NavLink>
-        <NavLink to="/enrollment" className={linkClasses}>
-          <Book size={20} /> Enrollement
+        <NavLink to="/enrollments" className={linkClasses}>
+          <Book size={20} /> Enrollments
         </NavLink>
 
         <NavLink to="/roles" className={linkClasses}>

@@ -5,6 +5,8 @@ import { Suspense, lazy } from "react";
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Roles = lazy(() => import("./pages/Roles"));
 const Users = lazy(() => import("./pages/Users"));
+const Courses = lazy(() => import("./pages/Courses"));
+const Enrollments = lazy(() => import("./pages/Enrollments"));
 const Settings = lazy(() => import("./pages/Settings"));
 const Login = lazy(() => import("./pages/Login"));
 const SignUp = lazy(() => import("./pages/Signup"));
@@ -21,6 +23,8 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/enrollments" element={<Enrollments />} />
           <Route path="/roles" element={<Roles />} />
           <Route path="/settings" element={<Settings />} />
         </Route>
