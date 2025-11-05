@@ -16,12 +16,12 @@ function App() {
     <Suspense fallback={<p className="p-6">Loading...</p>}>
       <Routes>
         {/* Login OUTSIDE layout */}
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
 
         {/* App Layout Pages */}
         <Route element={<Layout />}>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/users" element={<Users />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/enrollments" element={<Enrollments />} />

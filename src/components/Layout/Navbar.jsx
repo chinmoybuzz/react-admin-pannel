@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Sun, Moon, Bell } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -23,6 +25,15 @@ const Navbar = () => {
     document.documentElement.classList.toggle("dark");
     setDark(!dark);
     console.log("theme mode", dark);
+  };
+  const handleLogout = () => {
+    // localStorage.removeItem("accessToken");
+    // localStorage.removeItem("refreshToken");
+    // localStorage.removeItem("token");
+    // localStorage.removeItem("user");
+    // Clear all storage if needed
+    localStorage.clear();
+    navigate("/"); // ✅ Hard redirect so state resets
   };
 
   return (
@@ -52,7 +63,9 @@ const Navbar = () => {
             <a href="#" className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
               Settings
             </a>
-            <button className="w-full text-left px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">Sign out</button>
+            <button onClick={handleLogout} className="w-full text-left px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600">
+              Sign out
+            </button>
           </div>
         )}
       </div>

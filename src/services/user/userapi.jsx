@@ -1,7 +1,9 @@
 // src/services/user/userApi.js
 import axios from "axios";
+import axiosInstance from "../../api/axiosInstance";
 
-const BASE_URL = "https://jsonplaceholder.typicode.com/users";
+const BASE_URL = "/users";
+// const BASE_URL = "https://jsonplaceholder.typicode.com/users";
 const userData = [
   { id: 1, name: "Chinmoy Hembram", email: "chinmoy@example.com", role: "Admin", status: "Active", image: "https://i.pravatar.cc/41" },
   { id: 2, name: "John Doe", email: "john@example.com", role: "User", status: "Pending", image: "https://i.pravatar.cc/42" },
@@ -61,14 +63,14 @@ const userData = [
 const userApi = {
   // ✅ Get all users
   async findAll() {
-    const res = await axios.get(BASE_URL);
+    const res = await axiosInstance.get(`${BASE_URL}/list`);
     if (res) return userData;
     return [];
   },
 
   // ✅ Get user by id
   async findById(id) {
-    return axios.get(`${BASE_URL}/${id}`).then((res) => res.data);
+    return axiosInstance.get(`${BASE_URL}/${id}`).then((res) => res?.data);
   },
 
   // ✅ Create user with image
@@ -77,7 +79,7 @@ const userApi = {
       .post(BASE_URL, data, {
         headers: { "Content-Type": "multipart/form-data" },
       })
-      .then((res) => res.data);
+      .then((res) => res?.data);
   },
 
   // ✅ Update user with image
